@@ -34,16 +34,57 @@
 							</select>
 						</div>
 					</div>
-					<fieldset>
+										<fieldset>
 						<legend>Адрес регистрации</legend>
 						<div class="main">
 							<div class="field">
-								<label for="region">Регион</label>
-								<input type="text" id="region" name="region" value="Еврейская автономная область" required>
+								<label for="regionReg">Регион</label>
+								<input type="text" id="regionReg" name="regionReg" placeholder="Еврейская автономная область" required>
 							</div>
 							<div class="field">
 								<label for="district">Район</label>
-								<input type="text" placeholder="Если района нет, то поставить прочерк" id="district" required>
+								<input type="text" placeholder="Если района нет, то поставить прочерк" id="districtReg" name="districtReg" required>
+							</div>
+							<div class="field">
+								<label for="cityReg">Город</label>
+								<input type="text" id="cityReg">
+							</div>
+							<div class="field">
+								<label for="localityReg">Населенный пункт</label>
+								<input type="text" id="localityReg">
+							</div>
+							<div class="field">
+								<label for="streetReg">Улица</label>
+								<input type="text" id="streetReg" name="streetReg" required>
+							</div>
+							<div class="field">
+								<label for="postcodeReg">Индекс</label>
+								<input type="number" id="postcodeReg" name="postcodeReg">
+							</div>
+							<div class="field">
+								<label for="houseReg">Дом</label>
+								<input type="number" id="houseReg"  name="houseReg" required>
+							</div>
+							<div class="field">
+								<label for="houseBlockReg">Корпус</label>
+								<input type="number" id="houseBlockReg" name="houseBlockReg">
+							</div>
+							<div class="field">
+								<label for="apartmentReg">Квартира</label>
+								<input type="number" id="apartmentReg" name="apartmentReg">
+							</div>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Адрес проживания</legend>
+						<div class="main">
+							<div class="field">
+								<label for="region">Регион</label>
+								<input type="text" id="region" name="region" placeholder="Еврейская автономная область" required>
+							</div>
+							<div class="field">
+								<label for="district">Район</label>
+								<input type="text" placeholder="Если района нет, то поставить прочерк" id="district" name="district" required>
 							</div>
 							<div class="field">
 								<label for="city">Город</label>
@@ -55,23 +96,23 @@
 							</div>
 							<div class="field">
 								<label for="street">Улица</label>
-								<input type="text" id="street" required>
+								<input type="text" id="street" name="street" required>
 							</div>
 							<div class="field">
 								<label for="postcode">Индекс</label>
-								<input type="number" id="postcode">
+								<input type="number" id="postcode" name="postcode">
 							</div>
 							<div class="field">
 								<label for="house">Дом</label>
-								<input type="number" id="house" required>
+								<input type="number" id="house"  name="house" required>
 							</div>
 							<div class="field">
 								<label for="house-block">Корпус</label>
-								<input type="number" id="house-block">
+								<input type="number" id="house-block" name="houseBlock">
 							</div>
 							<div class="field">
 								<label for="apartment">Квартира</label>
-								<input type="number" id="apartment">
+								<input type="number" id="apartment" name="apartment">
 							</div>
 						</div>
 					</fieldset>
@@ -80,26 +121,27 @@
 						<legend>Данные основного документа, удостоверяющего личность</legend>
 						<div class="field">
 							<label for="type-doc"></label>
-							<select name="status" id="type-doc" required>
+							<select name="statusDoc" id="type-doc" required>
+								<option value=""></option>
 								<option value="passport">Паспорт РФ</option>
 								<option value="international-passport">Загранпаспорт РФ</option>
 							</select>
 						</div>
 						<div class="field">
 							<label for="series">Серия</label>
-							<input type="number" id="series">
+							<input type="number" id="series" name="seriesDoc">
 						</div>
 						<div class="field">
 							<label for="number">Номер</label>
-							<input type="number" id="number">
+							<input type="number" id="number" name="numberDoc">
 						</div>
 						<div class="field">
 							<label for="date">Дата выдачи</label>
-							<input type="date" id="date">
+							<input type="date" id="date" name="dateDoc">
 						</div>
 						<div class="field">
 							<label for="issued">Кем выдан</label>
-							<textarea class="textarea" name="issued" id="issued" cols="30" rows="2"></textarea>
+							<textarea class="textarea required" name="issued" id="issued" cols="30" rows="2" name="issuedDoc" ></textarea>
 						</div>
 					</fieldset>
 				</fieldset>
@@ -122,7 +164,7 @@
 						</div>
 						<div>
 							<label for="date-add">Дата устройства</label>
-							<input type="date" id="date-add">
+							<input type="date" id="date-add" name="dateAdd">
 						</div>
 					</div>
 			
@@ -130,11 +172,11 @@
 						<legend>Сведения о ребенке</legend>
 						<div class="field">
 							<label for="child-surnames">Фамилия</label>
-							<input type="text" id="child-surnames" required>
+							<input type="text" id="child-surnames" name="childSurname" required>
 						</div>
 						<div class="field">
 							<label for="child-names">Имя</label>
-							<input type="text" id="child-names" required>
+							<input type="text" id="child-names" name="childName" required>
 						</div>
 						<div class="field">
 							<label for="child-patronymic">Отчество</label>
@@ -142,7 +184,7 @@
 						</div>
 						<div class="field">
 							<label for="child-date-of-birth">Дата рождения</label>
-							<input type="date" id="child-date-of-birth">
+							<input type="date" id="child-date-of-birth" name="childDateOfBirth">
 						</div>
 					</fieldset>
 					<fieldset>
@@ -151,11 +193,11 @@
 							<legend>Сведения о матери ребенка</legend>
 							<div class="field">
 								<label for="mother-surname">Фамилия</label>
-								<input type="text" id="mother-surname" required>
+								<input type="text" id="mother-surname" name="motherSurname" required>
 							</div>
 							<div class="field">
 								<label for="mother-name">Имя</label>
-								<input type="text" id="mother-name" required>
+								<input type="text" id="mother-name" name="motherName" required>
 							</div>
 							<div class="field">
 								<label for="mother-patronymic">Отчество</label>
@@ -163,22 +205,22 @@
 							</div>
 							<div class="field">
 								<label for="mother-date-of-birth">Дата рождения</label>
-								<input type="date" id="mother-date-of-birth">
+								<input type="date" id="mother-date-of-birth" name="motherDateOfBirth" required>
 							</div>
 							<div class="field">
 								<label for="mother-snils">СНИЛС</label>
-								<input type="number" id="mother-snils" required>
+								<input type="number" id="mother-snils"  name=motherSnils required>
 							</div>
 						</fieldset>
 						<fieldset>
 							<legend>Сведения об отце ребенка</legend>
 							<div class="field">
 								<label for="father-surname">Фамилия</label>
-								<input type="text" id="father-surname" required>
+								<input type="text" id="father-surname" name="fatherSurname" required>
 							</div>
 							<div class="field">
 								<label for="father-name">Имя</label>
-								<input type="text" id="father-name" required>
+								<input type="text" id="father-name" name="fatherName" required>
 							</div>
 							<div class="field">
 								<label for="father-patronymic">Отчество</label>
@@ -186,11 +228,11 @@
 							</div>
 							<div class="field">
 								<label for="father-date-of-birth">Дата рождения</label>
-								<input type="date" id="father-date-of-birth">
+								<input type="date" id="father-date-of-birth" name="fatherDateOfBirth" required>
 							</div>
 							<div class="field">
 								<label for="father-snils">СНИЛС</label>
-								<input type="text" id="father-snils" required>
+								<input type="text" id="father-snils" name="fatherSnils" required>
 							</div>
 						</fieldset>
 						<div>
@@ -207,11 +249,11 @@
 							<legend> </legend>
 							<div class="field">
 								<label for="code-establishment">Код региона, в котором находится учреждение отбывания наказания</label>
-								<input type="number" id="code-establishment" required>
+								<input type="number" id="code-establishment" name="codeEstablishment" required>
 							</div>
 							<div class="field">
 								<label for="name-establishment">Наименование учреждения отбывания наказания</label>
-								<input type="text" id="name-establishment" required>
+								<input type="text" id="name-establishment"  name= "nameEstablishment" required>
 							</div>
 						</fieldset>
 					</fieldset>
@@ -220,23 +262,23 @@
 						<legend>Банковские реквизиты</legend>
 						<div class="field">
 							<label for="bank-name">Наименование банка</label>
-							<textarea class="textarea" name="bank-name" id="bank-name" cols="30" rows="2"></textarea>
+							<textarea class="textarea required" name="bank-name" id="bank-name" cols="30" rows="2" name="bankName" ></textarea>
 						</div>
 						<div class="field">
 							<label for="bic">БИК</label>
-							<input type="number" id="bic" required>
+							<input type="number" id="bic" name="bic" required>
 						</div>
 						<div class="field">
 							<label for="tin">ИНН</label>
-							<input type="number" id="tin" required>
+							<input type="number" id="tin" name="tin" required>
 						</div>
 						<div class="field">
 							<label for="crp">КПП</label>
-							<input type="number" id="crp" required>
+							<input type="number" id="crp" name="crp" required>
 						</div>
 						<div class="field">
 							<label for="checking-acc">Р/С</label>
-							<input type="number" id="checking-acc" required>
+							<input type="number" id="checking-acc" name="checkingAcc" required>
 						</div>
 					</fieldset>	
 				</fieldset>
@@ -245,7 +287,7 @@
 					<p>Вступившее в законную силу решение суда об усыновлении либо выписка из решения органа опеки и попечительства об установлении над ребенком опеки (попечительства), в том числе по договору о приемной семье</p>
 					<div class="file-upload">
 						<label>
-							<input type="file" name="Прикрепить" required multiple>
+							<input type="file" name="upload" multiple>
 							<span class="name-button">Прикрепить</span>
 						</label>
 					</div>
