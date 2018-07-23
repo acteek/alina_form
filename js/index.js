@@ -13,7 +13,12 @@ $("#orderForm").validate({
     region: "required",
     region: {
       required: true,
-      minlength: 5
+      minlength: 4
+    },
+    status: "required",
+    status: {
+      required: true,
+      valueNotEmpty: true
     }
   },
   messages: {
@@ -28,6 +33,10 @@ $("#orderForm").validate({
     region: {
       required: "Заполните Регион",
       minlength: jQuery.validator.format("Минимум {0} символа !")
+    },
+    status: {
+      required: "Выберете статус"
     }
+
   }
 });
