@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000000;
+ }
+
+.page-wrapper {
+ 	width: 900px;
+ 	margin: 0 auto;
+ 	padding: 5px 7px 10px;
+ 	background-color: #e7e1d4;
+ }
+
+*, :after, :before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+fieldset {
+	margin-bottom: 40px;
+	padding: 15px 10px;
+	border-width: 1px;
+	border-color: #e1dede;
+}
+
+h1 {
+	font-size: 16px;
+	text-align: center;
+	color: #2d335f;
+}
+
+legend {
+	font-style: oblique;
+	color: #1a39f3;
+}
+
+.fild {
+	display: flex;
+}
+
+label {
+	font-weight: bold;
+}
+
+.radio {
+	font-weight: 400;
+}
+
+input[type="text"] {
+	width: 600px;
+}
+
+select {
+	width: 600px;
+}
+
+.textarea {
+	width: 600px;
+	overflow-y: scroll;
+	resize: none;
+}
+
+.file-upload {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 80px;
+  height: 22px;
+  color: #000000;
+  border: 1px solid #4148ab;
+  border-radius: 3px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.file-upload input[type="file"]{
+  display: none; 
+}
+
+.file-upload label {
+	position: absolute;
+  display: block;
+  cursor: pointer;
+}
+
+.name-button {
+	padding: 3px 6px;
+  font-size: 12px;
+}
+
+.submit {
+	display: block;
+	margin-right: 50px;
+	padding: 2px 30px;
+	margin-left: auto;
+	background-color: #ffffff;
+	border: 1px solid #4148ab;
+	border-radius: 3px;
+}
